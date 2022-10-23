@@ -1,16 +1,9 @@
-const User = ({name , title , description}) => {
-    let check = () =>
-    {
-        alert("Hello " + name)
-    }
+const User = () => {
     return (
         <div>
-            <h2>{name}</h2>
-            <div>{title}</div>
-            <span>{description}</span>
-            <button onClick={check}>Go</button>
+            <h1>Hello user</h1>
         </div>
     );
-}
+};
 
 export default User;

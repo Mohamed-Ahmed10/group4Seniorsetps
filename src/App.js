@@ -1,37 +1,39 @@
-import Navbar from "./components/nav";
-import {Fragment} from "react/cjs/react.development";
-import "./index.css";
-import Footer from "./components/footer";
-import User from "./components/user";
-import Car from "./components/car";
+import ViewCourse from "./components/courses";
+import DisplayDetails from "./components/displayDetails";
+import EditState from "./components/editState";
+import Rendering from "./components/rendering";
+import "./index.scss";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import BootstrapTest from "./components/bootstrapTest";
+import BootstrapTest2 from "./components/bootstrapTest2";
+import ViewCourses from "./components/viewCourses";
 function App() {
+    let courses = ["HTML" , "CSS", "JS", "React"];
     return (
-        <Fragment>
             <div className="App">
-                <Navbar />
+                <Rendering />
+                <DisplayDetails />
+                <hr />
+                <EditState />
+                <hr />
+                <ViewCourse courses = {courses}/>
+
+                <hr />
+                SASS TEST
+                <button className="btn btn-primary">Bootstrap</button>
+                <BootstrapTest />
+                <BootstrapTest2 />
+
+                <hr />
+                <ViewCourses />
             </div>
-            <div>Hello</div>
-            <hr />
-            
-
-            <hr />
-            <User
-                name="Mohamed"
-                title="frontend developer"
-                description="desc one"
-            />
-            <User name="Khaled" title="Doctor" description="desc two" />
-            <User name="Sayed" title="Full stack developer" description="Clever"/>
-
-            <hr />
-            <Car company="BMW" country="Germany"/>
-            <br />
-            <Car company="MG" country="USA"/>
-
-            <hr />
-            <Footer />
-        </Fragment>
     );
 }
 
 export default App;
+/*
+- conditional rendering && class
+- map on array & object
+- State and setState
+- add react bootstrap & sass
+*/
